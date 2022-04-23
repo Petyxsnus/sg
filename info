@@ -1,0 +1,38 @@
+npx ts-node \metaplex/js/packages/cli/src/candy-machine-v2-cli.ts upload\
+      -e mainnet-beta \
+      -k seller.json \
+      -cp config.json \
+      -c  .cache\
+       \assets
+
+
+    npx ts-node \metaplex/js/packages/cli/src/candy-machine-v2-cli.ts verify_upload \
+    -e mainnet-beta \
+    -k seller.json \
+    -c .cache
+
+
+
+    initialized config for a candy machine with publickey: AUwtxnvGnamrwM692QUeDKeZXs8AcfM1qhrqgf5WpHX2
+
+    metaboss sign all --keypair seller.json --creator 6PVF8cMxp63bmUAv6NNpBKuJStd9UWerTjsZNLbDCk1C
+
+
+
+metaboss sign all --keypair <PATH_TO_KEYPAIR> --creator <FIRST_CREATOR>
+
+
+metaboss sign all --keypair seller.json --creator AUwtxnvGnamrwM692QUeDKeZXs8AcfM1qhrqgf5WpHX2 --v2
+
+
+git commit -m "initial comment"
+
+
+config for a candy machine with publickey: AUwtxnvGnamrwM692QUeDKeZXs8AcfM1qhrqgf5WpHX2
+
+npx ts-node \metaplex/js/packages/cli/src/candy-machine-v2-cli.ts update_candy_machine \
+    -e mainnet-beta \
+    -k seller.json \
+    -cp config.json \
+    -c .cache
+
